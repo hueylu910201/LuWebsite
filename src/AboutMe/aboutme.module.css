@@ -1,0 +1,115 @@
+.aboutContainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  /* 確保邊距和填充不會影響總寬度 */
+}
+
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url('/pexels-spencerlind1-1331750.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 1;
+  will-change: transform;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* 新增包裹層，用於整體移動 */
+.mainContentWrapper {
+  will-change: transform;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.mainContent {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.textColumn,
+.imageColumn {
+  position: relative;
+}
+
+.introText {
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.introText p {
+  margin-bottom: 1.5rem;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 2rem 1rem;
+    padding-bottom: 5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .introText {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .mainContentWrapper {
+    will-change: transform;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .imageWrapper {
+    margin-top: 2rem;
+  }
+}

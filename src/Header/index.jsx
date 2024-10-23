@@ -29,7 +29,7 @@ export default function Header() {
                             工作經歷
                         </a>
                         <a href="#" className={styles.menuItem}>
-                            作品集
+                            我的作品
                         </a>
                         <a href="#" className={styles.menuItem}>
                             我的日常
@@ -57,16 +57,16 @@ export default function Header() {
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.isOpen : ''}`}>
                     <div className={styles.mobileMenuInner}>
                         <a href="#" className={styles.mobileMenuItem}>
-                            首頁
+                            關於我
                         </a>
                         <a href="#" className={styles.mobileMenuItem}>
-                            關於我們
+                            工作經歷
                         </a>
                         <a href="#" className={styles.mobileMenuItem}>
-                            服務項目
+                            我的作品
                         </a>
                         <a href="#" className={styles.mobileMenuItem}>
-                            聯絡我們
+                            我的日常
                         </a>
                     </div>
                 </div>

@@ -28,6 +28,8 @@ body {
   /* place-items: center;
   min-width: 320px;
   min-height: 100vh; */
+  overflow-x: hidden; /* 移除水平滾動 */
+  max-width: 100vw;; /* 確保寬度不會超過視窗 */
 }
 
 h1 {
