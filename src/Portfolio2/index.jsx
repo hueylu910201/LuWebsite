@@ -56,10 +56,11 @@ export default function Portfolio2() {
                 {portfolioItems.map(item => (
                     <Col
                         key={item.id}
-                        xs={16}    // 手機螢幕一列顯示一個
+                        xs={18}    // 手機螢幕一列顯示一個
                         sm={16}    // 平板螢幕一列顯示兩個
                         md={8}     // 電腦螢幕一列顯示三個
-                        lg={5}     // 大螢幕一列顯示四個
+                        lg={4}     // 大螢幕一列顯示四個
+                        className={styles.portfolioCol}
                     >
                         <a href={item.link} target="_blank" rel="noopener noreferrer">
                             <Card

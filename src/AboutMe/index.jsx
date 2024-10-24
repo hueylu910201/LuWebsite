@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'antd';
+import { motion } from 'framer-motion';
 import styles from "../AboutMe/aboutme.module.css";
-import MySkills from '../MySkills';
 
 export default function AboutMe() {
 
@@ -30,11 +30,14 @@ export default function AboutMe() {
                 <h1 className={styles.title}>關於我</h1>
 
                 {/* 整個內容區塊一起移動 */}
-                <div
+                <motion.div
                     className={styles.mainContentWrapper}
                     style={{
                         transform: `translateY(${scrollY * 0.2}px)`
                     }}
+                    initial={{ opacity: 0, y: 100 }} // Start hidden and slightly below
+                    animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+                    transition={{ duration: 0.7 }} // Animation duration
                 >
                     <Row gutter={[48, 24]} align="middle" className={styles.mainContent}>
                         {/* 左側個人簡介 */}
@@ -56,7 +59,7 @@ export default function AboutMe() {
                             </div>
                         </Col>
                     </Row>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

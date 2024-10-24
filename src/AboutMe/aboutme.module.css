@@ -3,7 +3,7 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  padding: 2rem 2rem;
+  padding: 5rem 2rem;
   box-sizing: border-box;
   /* 確保邊距和填充不會影響總寬度 */
 }
@@ -91,7 +91,7 @@
   .aboutContainer {
     width: 100%;
     overflow-x: hidden;
-    padding: 1rem 1rem;
+    padding: 5rem 1rem;
     /* padding-bottom: 5rem; */
   }
 

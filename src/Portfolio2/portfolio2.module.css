@@ -14,10 +14,11 @@
     /* z-index: -1; */
     transition: background-size 0.3s ease-out;
 }
+
 .title {
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
 }
 
 .title h1 {
@@ -28,7 +29,7 @@
 .portfolioRow {
     display: flex;
     justify-content: center;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .portfolioCard {
@@ -81,11 +82,14 @@
         padding: 0 2rem;
         flex-direction: column;
     }
+
     .portfolioRow {
         display: flex;
         justify-content: center;
     }
-
+    .portfolioCol{
+        margin-bottom: 1rem;
+    }
     .imageContainer {
         height: 180px;
     }

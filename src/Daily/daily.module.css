@@ -2,19 +2,30 @@
 .cardContainer {
     display: flex;
     justify-content: center;
-    background-color: #eac8c8;
-    padding: 0;
+    background-color: #fcbb9a89;
     /* 移除內距 */
     flex-direction: column;
     margin-bottom: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.toptitle {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
 
+.toptitle h1 {
+    font-size: 2.5rem;
+}
 .cardRow {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    margin: 0 !important;
+    margin-bottom: 2rem;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9; */
+    /* margin: 0 !important; */
     /* 覆蓋 antd 的預設邊距 */
 }
 
@@ -30,6 +41,7 @@
     overflow: hidden;
     display: flex;
     /* 確保圖片填滿容器 */
+    display: flex;
 }
 
 .image {
@@ -40,16 +52,36 @@
     object-fit: cover;
     /* 確保圖片正確填充空間 */
 }
-
+@keyframes borderAnimation {
+    0% {
+        border-color: transparent;
+    }
+    25% {
+        border-top-color: #232323;
+    }
+    50% {
+        border-right-color: #232323;
+    }
+    75% {
+        border-bottom-color: #232323;
+    }
+    100% {
+        border-color: #232323; /* Ensure all borders are visible at the end */
+    }
+}
 .content {
     padding: 16px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     height: 100%;
+    border: 2px solid transparent; /* Start with a transparent border */
+    transition: border-color 0.1s ease-in;
     /* 確保內容區域填滿高度 */
 }
-
+.content:hover {
+    animation: borderAnimation 2s forwards; /* Apply the animation on hover */
+}
 .title {
     font-size: 24px;
     font-weight: bold;
@@ -64,25 +96,7 @@
     margin-bottom: 20px;
 }
 
-.features {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    /* 移除預設邊距 */
-}
 
-.features li {
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.features li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #1890ff;
-}
 
 /* RWD 樣式 */
 @media (max-width: 768px) {
