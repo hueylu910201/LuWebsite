@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState,useRef } from 'react';
 import { Card, Col, Row } from 'antd';
+import { motion, useInView } from 'framer-motion';
 import styles from "../Daily/daily.module.css"
 
 export default function Daily() {
@@ -18,7 +19,14 @@ export default function Daily() {
         },
 
     ]
+    const ref = useRef(null); 
+    const isInView = useInView(ref, { threshold: 0.3 }); // 30% 可見時觸發動畫
+    const [hasPlayed, setHasPlayed] = useState(false); // 記錄動畫是否已經觸發過
 
+    // 當進入視窗且動畫尚未播放過時，播放動畫
+    if (isInView && !hasPlayed) {
+        setHasPlayed(true);
+    }
 
     return (
         <Card className={styles.cardContainer}>
@@ -26,25 +34,33 @@ export default function Daily() {
                 <h1>我的日常</h1>
             </div>
             {dailyItems.map(item => (
-                <Row className={styles.cardRow} key={item.id}> {/* Add marginBottom for spacing */}
-                    <Col xs={24} sm={24} md={10} lg={8} xl={8} className={styles.colNoGutter}>
-                        <div className={styles.imageWrapper}>
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                className={styles.image}
-                            />
-                        </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={14} lg={10} xl={10} className={styles.colNoGutter}>
-                        <div className={styles.content}>
-                            <h2 className={styles.title}>{item.title}</h2>
-                            <p className={styles.description}>
-                                {item.description}
-                            </p>
-                        </div>
-                    </Col>
-                </Row>
+                <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }} // 起始：隱藏並向下偏移
+                animate={hasPlayed ? { opacity: 1, y: 0 } : {}} // 只在第一次播放動畫
+                transition={{ duration: 0.7 }} // 動畫時間
+                >
+                    <Row className={styles.cardRow} key={item.id}> {/* Add marginBottom for spacing */}
+
+                        <Col xs={20} sm={24} md={10} lg={8} xl={8} className={styles.colNoGutter}>
+                            <div className={styles.imageWrapper}>
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className={styles.image}
+                                />
+                            </div>
+                        </Col>
+                        <Col xs={20} sm={24} md={14} lg={10} xl={10} className={styles.colNoGutter}>
+                            <div className={styles.content}>
+                                <h2 className={styles.title}>{item.title}</h2>
+                                <p className={styles.description}>
+                                    {item.description}
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
+                </motion.div>
             ))}
         </Card>
     );

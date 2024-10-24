@@ -75,7 +75,7 @@
     flex-direction: column;
     background-color: #fff;
     height: 100%;
-    border: 2px solid transparent; /* Start with a transparent border */
+    border: 1px solid transparent; /* Start with a transparent border */
     transition: border-color 0.1s ease-in;
     /* 確保內容區域填滿高度 */
 }
