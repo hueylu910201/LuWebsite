@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import styles from "../Header/header.module.css"
-export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioClick ,onDailyClick}) {
+export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioClick, onDailyClick }) {
     const [isOpen, setIsOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -46,16 +46,16 @@ export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioCli
 
                     {/* Desktop Menu */}
                     <div className={styles.desktopMenu}>
-                        <a href="#" className={styles.menuItem} onClick={onAboutMeClick}>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
                             關於我
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={onMySkillsClick}>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onMySkillsClick(); }}>
                             擅長技能
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={onPortfolioClick}>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             我的作品
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={onDailyClick}>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
                             我的日常
                         </a>
                     </div>
@@ -80,16 +80,16 @@ export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioCli
                 {/* Mobile Menu */}
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.isOpen : ''}`}>
                     <div className={styles.mobileMenuInner}>
-                        <a href="#" className={styles.mobileMenuItem} onClick={onAboutMeClick}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
                             關於我
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={onMySkillsClick}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onMySkillsClick(); }}>
                             擅長技能
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={onPortfolioClick}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             我的作品
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={onDailyClick}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
                             我的日常
                         </a>
                     </div>
