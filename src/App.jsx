@@ -8,6 +8,7 @@ import MySkills from './MySkills'
 import Portfolio from './Portfolio'
 import Portfolio2 from './Portfolio2'
 import Daily from './Daily'
+import BackToTop from './BackToTop'
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
       <div ref={dailyRef}>
         <Daily />
       </div>
-
+      <BackToTop/>
     </>
   )
 }
