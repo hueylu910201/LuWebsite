@@ -3,7 +3,7 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   box-sizing: border-box;
   /* 確保邊距和填充不會影響總寬度 */
 }
@@ -80,12 +80,19 @@
   object-fit: cover;
 }
 
+@media(max-width:1024px){
+  .aboutContainer {
+    min-height: 50vh;
+    padding: 1rem 0rem;
+  }
+}
+
 @media (max-width: 768px) {
   .aboutContainer {
     width: 100%;
     overflow-x: hidden;
-    padding: 2rem 1rem;
-    padding-bottom: 5rem;
+    padding: 1rem 1rem;
+    /* padding-bottom: 5rem; */
   }
 
   .title {

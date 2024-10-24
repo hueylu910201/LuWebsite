@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'antd';
 import styles from "../AboutMe/aboutme.module.css";
+import MySkills from '../MySkills';
 
 export default function AboutMe() {
 

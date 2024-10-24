@@ -1,0 +1,100 @@
+/* PortfolioGallery.module.css */
+.portfolioContainer {
+    position: relative;
+    overflow: hidden;
+    background-color: #666;
+    background-image: url('/pexels-cottonbro-5054208.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 2rem;
+    padding-bottom: 2rem; */
+    /* z-index: -1; */
+    transition: background-size 0.3s ease-out;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.portfolioRow {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.portfolioCard {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.portfolioCard:hover {
+    transform: translateY(-5px);
+}
+
+.imageContainer {
+    overflow: hidden;
+    height: 200px;
+}
+
+.portfolioImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolioCard:hover .portfolioImage {
+    transform: scale(1.1);
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cardDescription {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* RWD 樣式調整 */
+@media screen and (max-width: 576px) {
+    .portfolioContainer {
+        display: flex;
+        /* justify-content: space-around; */
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+    .portfolioRow {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imageContainer {
+        height: 180px;
+    }
+
+    .cardTitle {
+        font-size: 16px;
+    }
+
+    .cardDescription {
+        font-size: 13px;
+    }
+}

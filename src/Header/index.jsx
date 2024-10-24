@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import styles from "../Header/header.module.css"
-export default function Header() {
+export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioClick ,onDailyClick}) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -22,16 +22,16 @@ export default function Header() {
 
                     {/* Desktop Menu */}
                     <div className={styles.desktopMenu}>
-                        <a href="#" className={styles.menuItem}>
+                        <a href="#" className={styles.menuItem} onClick={onAboutMeClick}>
                             關於我
                         </a>
-                        <a href="#" className={styles.menuItem}>
-                            工作經歷
+                        <a href="#" className={styles.menuItem} onClick={onMySkillsClick}>
+                            擅長技能
                         </a>
-                        <a href="#" className={styles.menuItem}>
+                        <a href="#" className={styles.menuItem} onClick={onPortfolioClick}>
                             我的作品
                         </a>
-                        <a href="#" className={styles.menuItem}>
+                        <a href="#" className={styles.menuItem} onClick={onDailyClick}>
                             我的日常
                         </a>
                     </div>
@@ -56,16 +56,16 @@ export default function Header() {
                 {/* Mobile Menu */}
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.isOpen : ''}`}>
                     <div className={styles.mobileMenuInner}>
-                        <a href="#" className={styles.mobileMenuItem}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={onAboutMeClick}>
                             關於我
                         </a>
-                        <a href="#" className={styles.mobileMenuItem}>
-                            工作經歷
+                        <a href="#" className={styles.mobileMenuItem} onClick={onMySkillsClick}>
+                            擅長技能
                         </a>
-                        <a href="#" className={styles.mobileMenuItem}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={onPortfolioClick}>
                             我的作品
                         </a>
-                        <a href="#" className={styles.mobileMenuItem}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={onDailyClick}>
                             我的日常
                         </a>
                     </div>
