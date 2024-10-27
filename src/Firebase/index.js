@@ -20,6 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const db = getFirestore(app);  // 初始化 Firestore
 
 export { database, ref, push };
 export { db, collection, addDoc };

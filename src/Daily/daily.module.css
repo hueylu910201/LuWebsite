@@ -5,7 +5,7 @@
     background-color: #fcbb9a89;
     /* 移除內距 */
     flex-direction: column;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .toptitle {

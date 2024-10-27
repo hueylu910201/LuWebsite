@@ -8,14 +8,16 @@ import MySkills from './MySkills'
 import Portfolio from './Portfolio'
 import Portfolio2 from './Portfolio2'
 import Daily from './Daily'
+import CommentBoard from './CommentBoard'
+import Footer from './Footer'
 import BackToTop from './BackToTop'
 
 
 function App() {
   const aboutMeRef = useRef(null);
-  const mySkillsRef = useRef(null);
   const portfolioRef = useRef(null);
   const dailyRef = useRef(null);
+  const commentRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -24,16 +26,14 @@ function App() {
     <>
       <Header
         onAboutMeClick={() => scrollToSection(aboutMeRef)}
-        onMySkillsClick={() => scrollToSection(mySkillsRef)}
         onPortfolioClick={() => scrollToSection(portfolioRef)}
         onDailyClick={() => scrollToSection(dailyRef)}
+        onCommentClick={() => scrollToSection(commentRef)}
       />
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-      <div ref={mySkillsRef}>
         <MySkills />
-      </div>
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
@@ -41,7 +41,11 @@ function App() {
       <div ref={dailyRef}>
         <Daily />
       </div>
-      <BackToTop/>
+      <div ref={commentRef}>
+        <CommentBoard />
+      </div>
+      <Footer/>
+      <BackToTop />
     </>
   )
 }

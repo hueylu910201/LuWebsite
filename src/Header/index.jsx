@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import styles from "../Header/header.module.css"
-export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioClick, onDailyClick }) {
+export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick, onCommentClick }) {
     const [isOpen, setIsOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -49,14 +49,14 @@ export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioCli
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
                             關於我
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onMySkillsClick(); }}>
-                            擅長技能
-                        </a>
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             我的作品
                         </a>
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
                             我的日常
+                        </a>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
+                            聯絡我
                         </a>
                     </div>
 
@@ -83,14 +83,14 @@ export default function Header({ onAboutMeClick, onMySkillsClick, onPortfolioCli
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
                             關於我
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onMySkillsClick(); }}>
-                            擅長技能
-                        </a>
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             我的作品
                         </a>
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
                             我的日常
+                        </a>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
+                            聯絡我
                         </a>
                     </div>
                 </div>
