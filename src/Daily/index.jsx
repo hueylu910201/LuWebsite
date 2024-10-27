@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Card, Col, Row } from 'antd';
 import { motion, useInView } from 'framer-motion';
 import styles from "../Daily/daily.module.css"
@@ -19,7 +19,7 @@ export default function Daily() {
         },
 
     ]
-    const ref = useRef(null); 
+    const ref = useRef(null);
     const isInView = useInView(ref, { threshold: 0.3 }); // 30% 可見時觸發動畫
     const [hasPlayed, setHasPlayed] = useState(false); // 記錄動畫是否已經觸發過
 
@@ -35,14 +35,15 @@ export default function Daily() {
             </div>
             {dailyItems.map(item => (
                 <motion.div
-                ref={ref}
-                initial={{ opacity: 0, y: 50 }} // 起始：隱藏並向下偏移
-                animate={hasPlayed ? { opacity: 1, y: 0 } : {}} // 只在第一次播放動畫
-                transition={{ duration: 0.7 }} // 動畫時間
+                    key={item.id}
+                    ref={ref}
+                    initial={{ opacity: 0, y: 50 }} // 起始：隱藏並向下偏移
+                    animate={hasPlayed ? { opacity: 1, y: 0 } : {}} // 只在第一次播放動畫
+                    transition={{ duration: 0.7 }} // 動畫時間
                 >
-                    <Row className={styles.cardRow} key={item.id}> {/* Add marginBottom for spacing */}
+                    <Row className={styles.cardRow}> {/* Add marginBottom for spacing */}
 
-                        <Col xs={20} sm={24} md={10} lg={8} xl={8} className={styles.colNoGutter}>
+                        <Col xs={20} sm={24} md={10} lg={8} xl={6} className={styles.colNoGutter} key={item.id}>
                             <div className={styles.imageWrapper}>
                                 <img
                                     src={item.img}
@@ -51,7 +52,7 @@ export default function Daily() {
                                 />
                             </div>
                         </Col>
-                        <Col xs={20} sm={24} md={14} lg={10} xl={10} className={styles.colNoGutter}>
+                        <Col xs={20} sm={24} md={14} lg={10} xl={8} className={styles.colNoGutter}>
                             <div className={styles.content}>
                                 <h2 className={styles.title}>{item.title}</h2>
                                 <p className={styles.description}>

@@ -4,6 +4,7 @@
     background-color: #fcbb9a89;
     display: flex;
     justify-content: space-around;
+    padding: 3rem;
 }
 
 .introText {

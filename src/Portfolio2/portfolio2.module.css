@@ -9,6 +9,7 @@
     background-position: center;
     display: flex;
     flex-direction: column;
+    padding: 5rem 2rem;
     /* padding: 0 2rem;
     padding-bottom: 2rem; */
     /* z-index: -1; */
@@ -18,7 +19,8 @@
 .title {
     display: flex;
     justify-content: center;
-    padding: 2rem 0rem;
+    /* padding: 2rem 0rem; */
+    padding-bottom: 4rem;
 }
 
 .title h1 {
@@ -29,14 +31,16 @@
 .portfolioRow {
     display: flex;
     justify-content: center;
-    padding-bottom: 4rem;
+    padding:4rem 6rem;
+    padding-top: 0rem;
 }
 
 .portfolioCard {
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease;
-    border-radius: 0; /* 確保沒有圓角 */
+    border-radius: 0;
+    /* 確保沒有圓角 */
 }
 
 .portfolioCard:hover {
@@ -66,7 +70,8 @@
 }
 
 .cardDescription {
-    font-size: 14px;
+    font-size: 16px;
+    padding-bottom: 2rem;
     color: #666;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -84,13 +89,20 @@
         flex-direction: column;
     }
 
+    .title {
+        padding-top: 4rem;
+    }
+
     .portfolioRow {
         display: flex;
         justify-content: center;
+        padding: 4rem 0rem;
     }
-    .portfolioCol{
+
+    .portfolioCol {
         margin-bottom: 1rem;
     }
+
     .imageContainer {
         height: 180px;
     }

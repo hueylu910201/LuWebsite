@@ -19,7 +19,7 @@ export default function Portfolio2() {
         {
             id: 1,
             title: 'Stanley-史丹利',
-            description: '短暫剪輯過史丹利影片，使用Pr完成特效、迷因與字卡。',
+            description: '短暫剪輯過史丹利影片，使用Pr完成特效、迷因與字卡',
             imageUrl: '/bandicam 2024-10-24 14-12-11-700.jpg',
             link: 'https://hueylu910201.github.io/2022.1.3-web-final/index.html',
         },
@@ -33,16 +33,44 @@ export default function Portfolio2() {
         {
             id: 3,
             title: '畢業VLOG',
+            description: '使用Pixel 8錄製，再使用capcut做簡單轉場與字幕',
+            imageUrl: '/2024.4..png',
+            link: 'https://youtu.be/OxVPZsNArQo?si=P6DysWPvjx_2On-1',
+        },
+        {
+            id: 4,
+            title: '畢業VLOG-2',
             description: '使用iPhone與穩定器錄製大學最後的時光，最後再用Pr進行後製',
             imageUrl: '/2024.4. (1).png',
             link: 'https://www.youtube.com/watch?v=e0P-_WXEAVo&t=10s&ab_channel=%E3%80%90%E8%80%81%E5%91%82%E3%80%91',
         },
         {
-            id: 4,
+            id: 5,
             title: '畢業祝福影片',
             description: '系上師生的祝福影片，在畢業典禮當天播放',
             imageUrl: '/Blue Orange Colorful Aesthetic Minimalist Lofi Music YouTube Thumbnail (1).png',
             link: 'https://www.youtube.com/watch?v=cBuWGqR3Mh4&ab_channel=%E3%80%90%E8%80%81%E5%91%82%E3%80%91',
+        },
+        {
+            id: 6,
+            title: '跨年VLOG',
+            description: '使用iPhone與穩定器錄製自己的跨年之旅',
+            imageUrl: '/2023跨年.png',
+            link: 'https://www.youtube.com/watch?v=cBuWGqR3Mh4&ab_channel=%E3%80%90%E8%80%81%E5%91%82%E3%80%91',
+        },
+        {
+            id: 7,
+            title: '魔獸初登板VLOG',
+            description: '記錄魔獸來台初登板的T1職籃比賽',
+            imageUrl: '/Howard.png',
+            link: 'https://youtu.be/Ft_hzQmsQWA?si=hWZWh-QpfPGQUKzO',
+        },
+        {
+            id: 8,
+            title: '臺北大巨蛋-棒球亞錦賽',
+            description: '大巨蛋終於開張，記錄亞錦賽中華vs菲律賓的精華',
+            imageUrl: '/大巨蛋.png',
+            link: 'https://youtu.be/_IZA36L87VM?si=sHCgzna9T3oswhkv',
         },
         // 可以繼續添加更多作品
     ];
