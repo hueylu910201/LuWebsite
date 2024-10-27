@@ -30,7 +30,7 @@ export default function CommentBoard() {
 
     return (
         <Row justify="center" className={styles.container}>
-            <Col xs={24} sm={20} md={16} lg={12}>
+            <Col xs={22} sm={20} md={10} lg={9}>
                 <h1 className={styles.title}>聯絡我</h1>
                 <Form
                     form={form}
