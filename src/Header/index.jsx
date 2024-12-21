@@ -41,23 +41,23 @@ export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick,
                     {/* Logo */}
                     <div className={styles.logo}>
                         <img className={styles.img} src='/basket-ball.png' alt='logo image' />
-                        <span>老呂</span>
+                        {/* <span>老呂</span> */}
                     </div>
 
                     {/* Desktop Menu */}
                     <div className={styles.desktopMenu}>
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
-                            關於我
+                            個人簡介
                         </a>
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
-                            我的作品
+                            經歷分享
                         </a>
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
-                            我的日常
+                            我的作品
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
+                        {/* <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
                             聯絡我
-                        </a>
+                        </a> */}
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -81,17 +81,17 @@ export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick,
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.isOpen : ''}`}>
                     <div className={styles.mobileMenuInner}>
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>
-                            關於我
+                            個人簡介
                         </a>
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
-                            我的作品
+                            經歷分享
                         </a>
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
-                            我的日常
+                            我的作品
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
+                        {/* <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
                             聯絡我
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>

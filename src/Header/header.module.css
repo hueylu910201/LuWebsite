@@ -23,9 +23,9 @@
 
 .navContent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 4.5rem;
 }
 
 .logo {
@@ -37,8 +37,7 @@
 }
 
 .img {
-    width: 2rem;
-    margin-right: 1rem;
+    width: 2.5rem;
 }
 
 .desktopMenu {

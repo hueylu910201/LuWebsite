@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Button } from 'antd';
 import { motion, useInView } from 'framer-motion';
 import styles from "../Daily/daily.module.css"
 
@@ -29,40 +29,76 @@ export default function Daily() {
     }
 
     return (
-        <Card className={styles.cardContainer}>
-            <div className={styles.toptitle}>
-                <h1>我的日常</h1>
-            </div>
-            {dailyItems.map(item => (
-                <motion.div
-                    key={item.id}
-                    ref={ref}
-                    initial={{ opacity: 0, y: 50 }} // 起始：隱藏並向下偏移
-                    animate={hasPlayed ? { opacity: 1, y: 0 } : {}} // 只在第一次播放動畫
-                    transition={{ duration: 0.7 }} // 動畫時間
-                >
-                    <Row className={styles.cardRow}> {/* Add marginBottom for spacing */}
+        <div className={styles.aboutContainer}>
+            {/* 視差背景 */}
+            {/* <div
+                className={styles.parallaxBackground}
+                style={{
+                    transform: `translateY(${scrollY * 0.5}px)`
+                }}
+            /> */}
 
-                        <Col xs={20} sm={24} md={10} lg={8} xl={6} className={styles.colNoGutter} key={item.id}>
+            <div className={styles.contentWrapper}>
+
+                {/* 整個內容區塊一起移動 */}
+                <motion.div
+                    className={styles.mainContentWrapper}
+                    style={{
+                        transform: `translateY(${scrollY * 0.2}px)`
+                    }}
+                    initial={{ opacity: 0, y: 100 }} // Start hidden and slightly below
+                    animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+                    transition={{ duration: 0.7 }} // Animation duration
+                >
+                    <Row gutter={[48, 24]} align="middle" className={styles.mainContent}>
+                        {/* 左側個人簡介 */}
+                        <Col xs={24} md={12} className={styles.textColumn} >
+                            <div className={styles.introText}>
+                                <p className={styles.title}>關於我</p>
+                                <p>熱愛運動的我，在大學中我同時參加了系籃與系排，很熟悉團隊合作與溝通，同時我也很喜歡剪輯自己的遊戲精華或記錄生活VLOG。我對於開發網頁、APP也有極高的興趣，目前仍持續學習新技術中!</p>
+                                <Button className={styles.learnButton}>我的頻道</Button>
+                            </div>
+                        </Col>
+
+                        {/* 右側照片 */}
+                        {/* <Col xs={24} md={12} className={styles.imageColumn}>
                             <div className={styles.imageWrapper}>
                                 <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    className={styles.image}
+                                    src="/selfimage.png"
+                                    alt="個人照片"
+                                    className={styles.profileImage}
                                 />
                             </div>
-                        </Col>
-                        <Col xs={20} sm={24} md={14} lg={10} xl={8} className={styles.colNoGutter}>
-                            <div className={styles.content}>
-                                <h2 className={styles.title}>{item.title}</h2>
-                                <p className={styles.description}>
-                                    {item.description}
-                                </p>
-                            </div>
-                        </Col>
+                        </Col> */}
+                        <Row gutter={[20]} className={styles.rowContainer}>
+                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                                <div className={styles.habbitBox}>
+                                    <img src="/basketball.png" alt="前端設計" />
+                                    <h3>打球</h3>
+                                </div>
+                            </Col>
+                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                                <div className={styles.habbitBox}>
+                                    <img src="/code.png" alt="前端設計" />
+                                    <h3>程式</h3>
+                                </div>
+                            </Col>
+                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                                <div className={styles.habbitBox}>
+                                    <img src="/gamepad.png" alt="前端設計" />
+                                    <h3>遊戲</h3>
+                                </div>
+                            </Col>
+                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                                <div className={styles.habbitBox}>
+                                    <img src="/video (2).png" alt="前端設計" />
+                                    <h3>剪輯</h3>
+                                </div>
+                            </Col>
+                        </Row >
                     </Row>
                 </motion.div>
-            ))}
-        </Card>
+            </div>
+        </div>
     );
 }

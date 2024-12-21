@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col,Button } from 'antd';
 import { motion } from 'framer-motion';
 import styles from "../AboutMe/aboutme.module.css";
 
@@ -19,15 +19,14 @@ export default function AboutMe() {
     return (
         <div className={styles.aboutContainer}>
             {/* 視差背景 */}
-            <div
+            {/* <div
                 className={styles.parallaxBackground}
                 style={{
                     transform: `translateY(${scrollY * 0.5}px)`
                 }}
-            />
+            /> */}
 
             <div className={styles.contentWrapper}>
-                <h1 className={styles.title}>關於我</h1>
 
                 {/* 整個內容區塊一起移動 */}
                 <motion.div
@@ -43,8 +42,9 @@ export default function AboutMe() {
                         {/* 左側個人簡介 */}
                         <Col xs={24} md={12} className={styles.textColumn}>
                             <div className={styles.introText}>
-                                <p>我是呂修逸，目前就讀於國北教數位系玩遊所碩士班一年級，平常的興趣是喜歡打籃球、游泳等戶外活動以及影片剪輯。</p>
-                                <p>而我對於網頁的前端比較熟悉，後端仍在初學階段。在工作方面，之前有曾過電視節目的後製剪接助理，協助字卡、人物去背等工作，對於剪輯是有相當大的熱忱。</p>
+                                <p className={styles.title}>大家好，我是呂修逸<br></br>擅長前端設計與影音剪輯</p>
+                                <p className={styles.sideTitle}>目前就讀於國立台北教育大學玩具與遊戲設計碩士班一年級，對於新事物充滿學習熱忱，還在摸索其他領域中!</p>
+                                <Button className={styles.learnButton}>了解更多</Button>
                             </div>
                         </Col>
 
@@ -52,7 +52,7 @@ export default function AboutMe() {
                         <Col xs={24} md={12} className={styles.imageColumn}>
                             <div className={styles.imageWrapper}>
                                 <img
-                                    src="/newdesign.jpg"
+                                    src="/selfimage.png"
                                     alt="個人照片"
                                     className={styles.profileImage}
                                 />

@@ -33,18 +33,18 @@ function App() {
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-        <MySkills />
+      <MySkills />
+      <div ref={dailyRef}>
+        <Daily />
+      </div>
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
       <Portfolio2 />
-      <div ref={dailyRef}>
-        <Daily />
-      </div>
       <div ref={commentRef}>
         <CommentBoard />
       </div>
-      <Footer/>
+      <Footer />
       <BackToTop />
     </>
   )

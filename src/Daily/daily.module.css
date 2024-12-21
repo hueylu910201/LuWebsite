@@ -1,124 +1,171 @@
-/* IntroCard.module.css */
-.cardContainer {
-    display: flex;
-    justify-content: center;
-    background-color: #fcbb9a89;
-    /* 移除內距 */
-    flex-direction: column;
-    /* margin-bottom: 3rem; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.toptitle {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
+.aboutContainer {
+    /* display: flex;
+    align-items: center; */
+    background-image: url('/pexels-martinpechy-304664.jpg');
+    background-size: cover;
+    /* 或 contain */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    /* 確保邊距和填充不會影響總寬度 */
 }
 
-.toptitle h1 {
+
+.contentWrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.title {
     font-size: 2.5rem;
-}
-.cardRow {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    margin-bottom: 2rem;
-    /* border-style: solid;
-    border-width: 1px;
-    border-color: #d9d9d9; */
-    /* margin: 0 !important; */
-    /* 覆蓋 antd 的預設邊距 */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
-.colNoGutter {
-    padding: 0 !important;
-    /* 覆蓋 antd Col 的預設內距 */
+/* 新增包裹層，用於整體移動 */
+.mainContentWrapper {
+    /* margin-bottom: 2rem; */
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.textColumn {
+    display: flex; /* 使其成為 flex 容器 */
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: space-between; /* 使內容均勻分佈 */
+}
+
+.imageColumn {
+    position: relative;
+}
+
+.introText {
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.learnButton {
+    margin-top: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: #000;
+    /* 默認文字顏色 */
+    border: 2px solid #d9d9d9;
+    /* 默認外框顏色 */
+    background-color: #fff;
+    /* 默認背景顏色 */
+    transition: all 0.3s ease;
+    /* 增加過渡效果 */
+}
+
+.learnButton:hover,
+.learnButton:focus,
+.learnButton:active {
+    color: #5BC1C5 !important;
+    /* 按下時文字顏色 */
+    border-color: #5BC1C5 !important;
+    /* 按下時邊框顏色 */
+    outline: none;
+    /* 移除默認黑色聚焦樣式 */
+    box-shadow: none;
+    /* 避免外框陰影產生黑色效果 */
 }
 
 .imageWrapper {
-    width: 100%;
-    height: 100%;
-    min-height: 250px;
-    overflow: hidden;
     display: flex;
-    /* 確保圖片填滿容器 */
-    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.image {
+.profileImage {
     width: 100%;
-    height: 100%;
-    display: block;
-    /* 移除圖片底部的空隙 */
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
-    /* 確保圖片正確填充空間 */
 }
-@keyframes borderAnimation {
-    0% {
-        border-color: transparent;
-    }
-    25% {
-        border-top-color: #232323;
-    }
-    50% {
-        border-right-color: #232323;
-    }
-    75% {
-        border-bottom-color: #232323;
-    }
-    100% {
-        border-color: #232323; /* Ensure all borders are visible at the end */
-    }
-}
-.content {
-    padding: 16px;
+
+
+.contentColumn {
+    margin: 1.3rem;
+    background-color: #ffffff;
+    /* margin: 0.1rem; */
+    border-radius: 15px;
+    aspect-ratio: 1;
     display: flex;
+    /* 使用 flex */
+    justify-content: center;
+    /* 水平置中 */
+    align-items: center;
+    /* 垂直置中 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    /* 混合兩層陰影 */
+}
+
+.habbitBox {
+    /* aspect-ratio: 1; */
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    background-color: #fff;
-    height: 100%;
-    border: 1px solid transparent; /* Start with a transparent border */
-    transition: border-color 0.1s ease-in;
-    /* 確保內容區域填滿高度 */
-}
-.content:hover {
-    animation: borderAnimation 2s forwards; /* Apply the animation on hover */
-}
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    color: #333;
+    align-items: center;
+    width: 90%;
+    /* 根據需求調整大小 */
+    height: 90%;
+    /* 讓它根據父容器大小自適應 */
+    /* background-color: #fff; */
 }
 
-.description {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 20px;
+.habbitBox img {
+    padding-top: 1rem;
+    width: 4rem;
 }
 
+.habbitBox h3 {
+    font-size: 1.2rem;
+}
 
+@media(max-width:1024px) {
+    .aboutContainer {
+        min-height: 50vh;
+        padding: 1rem 0rem;
+    }
+}
 
-/* RWD 樣式 */
 @media (max-width: 768px) {
+    .aboutContainer {
+        width: 100%;
+        overflow-x: hidden;
+        padding: 5rem 1rem;
+        /* padding-bottom: 5rem; */
+    }
+
+    .introText {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .mainContentWrapper {
+        will-change: transform;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .mainContent {
+        padding: 1rem;
+        padding-bottom: 3rem;
+    }
+
     .imageWrapper {
-        min-height: 200px;
-    }
-
-    .title {
-        font-size: 20px;
-    }
-
-    .description {
-        font-size: 14px;
-    }
-
-    .content {
-        padding: 12px;
-    }
-}
-
-@media (max-width: 576px) {
-    .imageWrapper {
-        min-height: 180px;
+        margin-top: 2rem;
     }
 }

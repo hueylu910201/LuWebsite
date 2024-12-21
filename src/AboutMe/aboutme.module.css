@@ -1,82 +1,90 @@
 .aboutContainer {
+  display: flex;
+  align-items: center;
+  background-color: #5BC1C5;
   position: relative;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   padding: 5rem 2rem;
   box-sizing: border-box;
   /* 確保邊距和填充不會影響總寬度 */
 }
 
-.parallaxBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background-image: url('/pexels-spencerlind1-1331750.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-  z-index: 1;
-  will-change: transform;
-}
 
 .contentWrapper {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.sideTitle{
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 /* 新增包裹層，用於整體移動 */
 .mainContentWrapper {
-  will-change: transform;
-  position: relative;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .mainContent {
-  background: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  /* padding: 2rem; */
 }
 
-.textColumn,
+.textColumn{
+  display: flex;
+  align-items: center;
+}
 .imageColumn {
   position: relative;
 }
 
 .introText {
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
 }
 
-.introText p {
-  margin-bottom: 1.5rem;
+.learnButton{
+  margin-top: 1rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: #000; /* 默認文字顏色 */
+  border: 2px solid #d9d9d9; /* 默認外框顏色 */
+  background-color: #fff; /* 默認背景顏色 */
+  transition: all 0.3s ease; /* 增加過渡效果 */
+}
+.learnButton:hover,
+.learnButton:focus,
+.learnButton:active {
+  color: #5BC1C5 !important; /* 按下時文字顏色 */
+  border-color: #5BC1C5 !important; /* 按下時邊框顏色 */
+  outline: none; /* 移除默認黑色聚焦樣式 */
+  box-shadow: none; /* 避免外框陰影產生黑色效果 */
 }
 
 .imageWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .profileImage {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
 
@@ -95,11 +103,6 @@
     /* padding-bottom: 5rem; */
   }
 
-  .title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
   .introText {
     font-size: 1rem;
     padding: 0.5rem;
@@ -110,6 +113,7 @@
     position: relative;
     margin-bottom: 2rem;
   }
+
   .mainContent {
     padding: 1rem;
     padding-bottom: 3rem;
