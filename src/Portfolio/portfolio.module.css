@@ -134,9 +134,9 @@
         display: none;
     }
 }
-@media(max-width:400px) {
+@media(max-width:420px) {
     .portfolioContainer{
-        width: 80%;
+        width: 84%;
     }
     .imageColumn{
         display: none;

@@ -159,9 +159,9 @@
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 420px){
   .aboutContainer {
-    width: 80%;
+    width: 84%;
     overflow-x: hidden;
     padding: 5rem 1rem;
     padding-bottom: 1rem;

@@ -217,10 +217,10 @@
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 420px){
     .portfolioContainer {
         display: flex;
-        width: 80%;
+        width: 84%;
         /* justify-content: space-around; */
         padding: 0 2rem;
         flex-direction: column;
