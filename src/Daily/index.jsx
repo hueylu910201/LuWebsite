@@ -56,7 +56,7 @@ export default function Daily() {
                             <div className={styles.introText}>
                                 <p className={styles.title}>關於我</p>
                                 <p>熱愛運動的我，在大學中我同時參加了系籃與系排，很熟悉團隊合作與溝通，同時我也很喜歡剪輯自己的遊戲精華或記錄生活VLOG。我對於開發網頁、APP也有極高的興趣，目前仍持續學習新技術中!</p>
-                                <Button className={styles.learnButton}>我的頻道</Button>
+                                <Button className={styles.learnButton} href='https://www.youtube.com/@huey_lu_0201'>我的頻道</Button>
                             </div>
                         </Col>
 

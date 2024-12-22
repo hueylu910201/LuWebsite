@@ -1,37 +1,47 @@
 /* PortfolioGallery.module.css */
 .portfolioContainer {
-    position: relative;
     overflow: hidden;
-    background-color: #666;
-    background-image: url('/pexels-cottonbro-5054208.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-image: url('/pexels-scottwebb-3255761.jpg');
+    background-size: contain;
+    /* background-attachment: fixed; */
     display: flex;
     flex-direction: column;
-    padding: 5rem 2rem;
-    /* padding: 0 2rem;
-    padding-bottom: 2rem; */
+    /* padding: 5rem 2rem; */
+    padding-bottom: 2rem;
     /* z-index: -1; */
-    transition: background-size 0.3s ease-out;
 }
 
 .title {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     /* padding: 2rem 0rem; */
-    padding-bottom: 4rem;
+    margin: 2rem;
 }
 
 .title h1 {
-    color: #fff;
+    color: #000000;
     font-size: 2.5rem;
+}
+
+.segmented {
+    display: flex;
+    justify-content: center;
+    /* 水平置中整個 Segmented */
+    align-items: center;
+    /* 確保內部選項內容垂直置中 */
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.5rem;
+    background-color: #B3D2D3;
+    margin: 2rem;
 }
 
 .portfolioRow {
     display: flex;
     justify-content: center;
-    padding:4rem 6rem;
+    padding: 4rem 6rem;
     padding-top: 0rem;
 }
 
@@ -49,7 +59,7 @@
 
 .imageContainer {
     overflow: hidden;
-    height: 200px;
+    aspect-ratio: 16/9;
 }
 
 .portfolioImage {
@@ -66,18 +76,83 @@
 .cardTitle {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 8px;
 }
 
 .cardDescription {
     font-size: 16px;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
     color: #666;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.portfolioModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalBigTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.modalContent {
+    padding: 0.5rem;
+}
+
+.modalImage {
+    aspect-ratio: 16/9;
+    width: 720px;
+}
+
+.modalDescription {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    font-size: 1.5rem;
+}
+
+.modalDescription p {
+    margin: 0.5rem 0rem;
+}
+
+.modaltitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: flex;
+}
+
+.modaledscription {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.modalButton {
+    padding: 1.5rem 1.5rem;
+    border-radius: 50px !important;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #ebf6f6;
+    border-color: #B3D2D3;
+    border-width: 3px;
+    border-radius: 15px;
+    margin-top: 10rem;
+    align-self: flex-end;
+    /* 將按鈕移到右側 */
+    margin-top: 1rem; 
+    /* 將按鈕推到底部 */
+}
+
+.modalButton:hover {
+    background-color: #B3D2D3 !important;
+    color: #ffffff;
 }
 
 /* RWD 樣式調整 */

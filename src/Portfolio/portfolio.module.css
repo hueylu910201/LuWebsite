@@ -1,8 +1,11 @@
 /* PortfolioGallery.module.css */
 .portfolioContainer {
+    background-image: url('/Group 35.png');
+    background-size: cover;
     display: flex;
-    /* justify-content: space-around; */
-    padding: 5rem 2rem;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    padding-bottom: 2.5rem;
     flex-direction: column;
     /* margin-bottom: 4rem; */
     background-color: #f8d5c389;
@@ -11,7 +14,6 @@
 .title {
     display: flex;
     justify-content: center;
-    padding-bottom: 4rem;
 }
 
 .title h1 {
@@ -20,60 +22,72 @@
 
 .portfolioRow {
     display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    /* justify-content: center; */
+    /* padding: 4rem 6rem; */
+    padding-top: 1rem;
+}
+.imageColumn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem;
+}
+/* .imageWrapper {
+    display: flex;
     justify-content: center;
-    padding:4rem 6rem;
-    padding-top: 0rem;
-}
+    align-items: center;
+} */
 
-.portfolioCard {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
-    border-radius: 0;
-    /* 確保沒有圓角 */
-}
-
-.portfolioCard:hover {
-    transform: translateY(-5px);
-}
-
-.imageContainer {
-    overflow: hidden;
-    height: 200px;
-    border-radius: 0;
-    /* 確保沒有圓角 */
-}
-
-.portfolioImage {
-    width: 100%;
-    height: 100%;
+.profileImage {
+    /* width: 70%; */
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 0;
-    /* 確保沒有圓角 */
+}
+.portfolioCol {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem;
+}
+.iconWrapper {
+    /* width: 2rem;
+    height: 2rem; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+/* .iconWrapper > * {
+    width: 100%; 
+    height: 100%;
+} */
+
+
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* justify-content: center; */
+}
+.timelineTitle{
+    position: relative;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
 }
 
-.portfolioCard:hover .portfolioImage {
-    transform: scale(1.1);
+.timelineDescription{
+    position: relative;
+    bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
 }
-
-.cardTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.cardDescription {
-    font-size: 16px;
-    padding-bottom: 2rem;
-    color: #666;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
 /* RWD 樣式調整 */
 @media screen and (max-width: 576px) {
     .portfolioContainer {

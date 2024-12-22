@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import styles from "../Header/header.module.css"
-export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick, onCommentClick }) {
+export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick, onPortfolio2Click }) {
     const [isOpen, setIsOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -52,7 +52,7 @@ export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick,
                         <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             經歷分享
                         </a>
-                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
+                        <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onPortfolio2Click(); }}>
                             我的作品
                         </a>
                         {/* <a href="#" className={styles.menuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>
@@ -86,7 +86,7 @@ export default function Header({ onAboutMeClick, onPortfolioClick, onDailyClick,
                         <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onPortfolioClick(); }}>
                             經歷分享
                         </a>
-                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onDailyClick(); }}>
+                        <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onPortfolio2Click(); }}>
                             我的作品
                         </a>
                         {/* <a href="#" className={styles.mobileMenuItem} onClick={(e) => { e.preventDefault(); onCommentClick(); }}>

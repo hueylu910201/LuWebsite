@@ -42,3 +42,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.ant-segmented-item {
+  border-radius: 1px;
+  padding: 0.5rem; /* 調整文字內部的間距 */
+}
+.ant-segmented-item-active {
+  color: #888;
+}

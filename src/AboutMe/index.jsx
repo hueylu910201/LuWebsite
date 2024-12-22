@@ -3,7 +3,7 @@ import { Row, Col,Button } from 'antd';
 import { motion } from 'framer-motion';
 import styles from "../AboutMe/aboutme.module.css";
 
-export default function AboutMe() {
+export default function AboutMe({onAboutMeClick}) {
 
     const [scrollY, setScrollY] = useState(0);
 
@@ -44,7 +44,7 @@ export default function AboutMe() {
                             <div className={styles.introText}>
                                 <p className={styles.title}>大家好，我是呂修逸<br></br>擅長前端設計與影音剪輯</p>
                                 <p className={styles.sideTitle}>目前就讀於國立台北教育大學玩具與遊戲設計碩士班一年級，對於新事物充滿學習熱忱，還在摸索其他領域中!</p>
-                                <Button className={styles.learnButton}>了解更多</Button>
+                                <Button className={styles.learnButton} onClick={(e) => { e.preventDefault(); onAboutMeClick(); }}>了解更多</Button>
                             </div>
                         </Col>
 
