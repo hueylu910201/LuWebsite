@@ -95,9 +95,15 @@
     
 }
 
-@media(max-width: 420px){
+@media(max-width: 425px){
     .container {
         width: 93%;
+        padding: 5rem 1rem;
+    }
+}
+@media(max-width: 415px){
+    .container {
+        width: 92%;
         padding: 5rem 1rem;
     }
 }

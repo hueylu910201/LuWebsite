@@ -135,7 +135,7 @@
         display: none;
     }
 }
-@media(max-width:420px) {
+@media(max-width:425px) {
     .portfolioContainer{
         width: 84%;
     }
@@ -152,6 +152,24 @@
         margin: 0;
     }
 }
+@media(max-width:415px) {
+    .portfolioContainer{
+        width: 83%;
+    }
+    .imageColumn{
+        display: none;
+    }
+    .timelineTitle{
+        font-size: 1rem;
+    }
+    .timelineDescription{
+        bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
 
 @media(max-width:400px) {
     .portfolioContainer{

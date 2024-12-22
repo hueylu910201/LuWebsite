@@ -217,10 +217,23 @@
 
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 425px){
     .portfolioContainer {
         display: flex;
         width: 84%;
+        /* justify-content: space-around; */
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+    .modalImage {
+        aspect-ratio: 16/9;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 415px){
+    .portfolioContainer {
+        display: flex;
+        width: 83%;
         /* justify-content: space-around; */
         padding: 0 2rem;
         flex-direction: column;

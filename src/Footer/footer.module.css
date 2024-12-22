@@ -27,9 +27,14 @@
         width: 87%;
     }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
     .footer {
         width: 84%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .footer {
+        width: 83%;
     }
 }
 @media screen and (max-width: 400px) {

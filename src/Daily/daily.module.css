@@ -210,9 +210,17 @@
     }
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
     .aboutContainer {
         width: 84%;
+        overflow-x: hidden;
+        padding: 2rem 1rem;
+        /* padding-bottom: 5rem; */
+    }
+}
+@media (max-width: 415px){
+    .aboutContainer {
+        width: 83%;
         overflow-x: hidden;
         padding: 2rem 1rem;
         /* padding-bottom: 5rem; */

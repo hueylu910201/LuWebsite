@@ -159,9 +159,22 @@
   }
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
   .aboutContainer {
     width: 84%;
+    overflow-x: hidden;
+    padding: 5rem 1rem;
+    padding-bottom: 1rem;
+  }
+  .learnButton{
+    left: 25%;
+    margin: 1rem auto; /* 上下邊距 1rem，左右自動 */
+  }
+}
+
+@media (max-width: 415px){
+  .aboutContainer {
+    width: 82%;
     overflow-x: hidden;
     padding: 5rem 1rem;
     padding-bottom: 1rem;
