@@ -28,7 +28,7 @@ export default function Portfolio() {
         {
             id: 3,
             title: '2024/05',
-            description: '參加第43屆新一代設計展並擔任機動長',
+            description: '參加第43屆新一代設計展',
             imageUrl: '/lukui.jpg',
             icon: <WorkIcon style={{ fontSize: '3.5rem', position: 'relative', bottom: '1rem', right: '1.5rem', backgroundColor: '#D3E6FB', padding: '0.5rem', borderRadius: '500px' }} />,
             link: 'https://lukui-final.vercel.app/',
@@ -58,11 +58,11 @@ export default function Portfolio() {
                 <h1>經歷分享</h1>
             </div>
             <Row gutter={[48, 24]} className={styles.portfolioRow}>
-                <Col xs={24} md={10} className={styles.imageColumn}>
+                <Col xs={0} md={10} className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
                         <img
                             src="/Group 21.png"
-                            alt="個人照片"
+                            alt="辦公桌是意圖"
                             className={styles.profileImage}
                         />
                     </div>

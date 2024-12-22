@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col,Button } from 'antd';
+import { Row, Col, Button } from 'antd';
 import { motion } from 'framer-motion';
 import styles from "../AboutMe/aboutme.module.css";
 
-export default function AboutMe({onAboutMeClick}) {
+export default function AboutMe({ onAboutMeClick }) {
 
     const [scrollY, setScrollY] = useState(0);
 
@@ -40,6 +40,15 @@ export default function AboutMe({onAboutMeClick}) {
                 >
                     <Row gutter={[48, 24]} align="middle" className={styles.mainContent}>
                         {/* 左側個人簡介 */}
+                        <Col xs={24} md={0} className={styles.imageColumn}>
+                            <div className={styles.imageWrapper}>
+                                <img
+                                    src="/selfimage.png"
+                                    alt="個人照片"
+                                    className={styles.profileImage}
+                                />
+                            </div>
+                        </Col>
                         <Col xs={24} md={12} className={styles.textColumn}>
                             <div className={styles.introText}>
                                 <p className={styles.title}>大家好，我是呂修逸<br></br>擅長前端設計與影音剪輯</p>
@@ -49,7 +58,7 @@ export default function AboutMe({onAboutMeClick}) {
                         </Col>
 
                         {/* 右側照片 */}
-                        <Col xs={24} md={12} className={styles.imageColumn}>
+                        <Col xs={0} md={12} className={styles.imageColumn}>
                             <div className={styles.imageWrapper}>
                                 <img
                                     src="/selfimage.png"

@@ -12,11 +12,18 @@
 }
 
 .icon {
-    font-size: 3rem !important; /* 使用具體的像素值 */
+    font-size: 3rem !important;
+    /* 使用具體的像素值 */
     color: black;
 }
 
 .footerText {
     font-size: 1.2rem;
     margin: 0;
+}
+
+@media screen and (max-width: 440px) {
+    .footer {
+        width: 87%;
+    }
 }

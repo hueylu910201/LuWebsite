@@ -137,20 +137,51 @@
 @media(max-width:1024px) {
     .aboutContainer {
         min-height: 50vh;
-        padding: 1rem 0rem;
+        padding: 2rem 0rem;
+        padding-bottom: 5rem;
+    }
+    .title{
+        text-align: center;
+    }
+    .introText {
+        padding: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+    .habbitBox {
+        /* aspect-ratio: 1; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        /* 根據需求調整大小 */
+        height: 40%;
+        /* 讓它根據父容器大小自適應 */
+        /* background-color: #fff; */
+    }
+    
+    .habbitBox img {
+        padding-top: 1rem;
+        width: 5rem;
+    }
+    
+    .habbitBox h3 {
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 440px) {
     .aboutContainer {
-        width: 100%;
+        width: 87%;
         overflow-x: hidden;
-        padding: 5rem 1rem;
+        padding: 2rem 1rem;
         /* padding-bottom: 5rem; */
     }
 
     .introText {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0.5rem;
     }
 
@@ -167,5 +198,22 @@
 
     .imageWrapper {
         margin-top: 2rem;
+    }
+    .habbitBox img {
+        padding-top: 1rem;
+        width: 3rem;
+    }
+    .rowContainer{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px){
+    .aboutContainer {
+        width: 80%;
+        overflow-x: hidden;
+        padding: 2rem 1rem;
+        /* padding-bottom: 5rem; */
     }
 }

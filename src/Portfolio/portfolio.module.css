@@ -26,7 +26,7 @@
     justify-content: space-around;
     /* justify-content: center; */
     /* padding: 4rem 6rem; */
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 .imageColumn{
     display: flex;
@@ -89,7 +89,7 @@
     margin: 0;
 }
 /* RWD 樣式調整 */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1024px) {
     .portfolioContainer {
         display: flex;
         /* justify-content: space-around; */
@@ -100,7 +100,12 @@
     .title {
         padding-top: 4rem;
     }
-
+    .profileImage {
+        /* width: 70%; */
+        max-width: 400px;
+        height: auto;
+        object-fit: cover;
+    }
     .portfolioRow {
         display: flex;
         justify-content: center;
@@ -114,12 +119,35 @@
     .imageContainer {
         height: 180px;
     }
-
-    .cardTitle {
-        font-size: 16px;
+    .timelineDescription{
+        bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 0;
     }
-
-    .cardDescription {
-        font-size: 13px;
+}
+@media(max-width:440px) {
+    .portfolioContainer{
+        width: 87%;
+    }
+    .imageColumn{
+        display: none;
+    }
+}
+@media(max-width:400px) {
+    .portfolioContainer{
+        width: 80%;
+    }
+    .imageColumn{
+        display: none;
+    }
+    .timelineTitle{
+        font-size: 1rem;
+    }
+    .timelineDescription{
+        bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
     }
 }

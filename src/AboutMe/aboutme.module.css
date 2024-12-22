@@ -7,7 +7,6 @@
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 2rem;
-  box-sizing: border-box;
   /* 確保邊距和填充不會影響總寬度 */
 }
 
@@ -90,17 +89,29 @@
 
 @media(max-width:1024px) {
   .aboutContainer {
+    flex-wrap: wrap;
     min-height: 50vh;
-    padding: 1rem 0rem;
+    padding: 1rem 3rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  
+  .sideTitle{
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .profileImage{
+    max-width: 90%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 440px) {
   .aboutContainer {
-    width: 100%;
+    width: 87%;
     overflow-x: hidden;
     padding: 5rem 1rem;
-    /* padding-bottom: 5rem; */
+    padding-bottom: 1rem;
   }
 
   .introText {
@@ -113,13 +124,50 @@
     position: relative;
     margin-bottom: 2rem;
   }
-
+  .textColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 確保寬度為100% */
+  }
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .sideTitle{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .learnButton{
+    left: 26%;
+    margin: 1rem auto; /* 上下邊距 1rem，左右自動 */
+  }
+  .profileImage{
+    max-width: 70%;
+  }
   .mainContent {
-    padding: 1rem;
-    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column; /* 改為垂直排列以避免裁切 */
+    align-items: center; /* 垂直置中 */
+    padding: 1rem; /* 確保內部填充 */
   }
 
   .imageWrapper {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px){
+  .aboutContainer {
+    width: 80%;
+    overflow-x: hidden;
+    padding: 5rem 1rem;
+    padding-bottom: 1rem;
+  }
+  .learnButton{
+    left: 25%;
+    margin: 1rem auto; /* 上下邊距 1rem，左右自動 */
   }
 }

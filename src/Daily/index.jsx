@@ -60,16 +60,6 @@ export default function Daily() {
                             </div>
                         </Col>
 
-                        {/* 右側照片 */}
-                        {/* <Col xs={24} md={12} className={styles.imageColumn}>
-                            <div className={styles.imageWrapper}>
-                                <img
-                                    src="/selfimage.png"
-                                    alt="個人照片"
-                                    className={styles.profileImage}
-                                />
-                            </div>
-                        </Col> */}
                         <Row gutter={[20]} className={styles.rowContainer}>
                             <Col xs={8} md={10}  className={styles.contentColumn}>
                                 <div className={styles.habbitBox}>

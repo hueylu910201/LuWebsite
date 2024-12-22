@@ -146,7 +146,7 @@
     margin-top: 10rem;
     align-self: flex-end;
     /* 將按鈕移到右側 */
-    margin-top: 1rem; 
+    margin-top: 1rem;
     /* 將按鈕推到底部 */
 }
 
@@ -156,37 +156,77 @@
 }
 
 /* RWD 樣式調整 */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 440px) {
     .portfolioContainer {
         display: flex;
+        width: 87%;
         /* justify-content: space-around; */
         padding: 0 2rem;
         flex-direction: column;
     }
 
     .title {
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
 
     .portfolioRow {
         display: flex;
         justify-content: center;
-        padding: 4rem 0rem;
+        padding: 1rem 0rem;
+        margin-bottom: 2rem;
     }
 
     .portfolioCol {
         margin-bottom: 1rem;
     }
 
+    .portfolioImage {
+        margin: 0;
+    }
+
     .imageContainer {
         height: 180px;
     }
 
-    .cardTitle {
-        font-size: 16px;
+    .portfolioModal {
+        width: 100%;
+        /* 在非常小的螢幕上使用 95% 寬度 */
+        padding: 1rem;
+        /* 減少內部填充 */
     }
 
-    .cardDescription {
-        font-size: 13px;
+    .modalBigTitle {
+        font-size: 1.5rem;
+        /* 調整標題字體大小 */
+    }
+    .modalImage {
+        aspect-ratio: 16/9;
+        width: 360px;
+    }
+    .modaledscription {
+        font-size: 1.1rem;
+        /* 調整描述字體大小 */
+    }
+
+    .modalButton {
+        padding: 1.5rem 2rem;
+        /* 調整按鈕的填充 */
+        font-size: 1rem;
+        /* 調整按鈕字體大小 */
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .portfolioContainer {
+        display: flex;
+        width: 80%;
+        /* justify-content: space-around; */
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+    .modalImage {
+        aspect-ratio: 16/9;
+        width: 300px;
     }
 }
