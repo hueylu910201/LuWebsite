@@ -10,13 +10,13 @@ export default function Footer() {
         <Row justify="center" className={styles.footer}>
             <Col xs={24} sm={20} md={16} lg={12}>
                 <div className={styles.socialMedia}>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/profile.php?id=100007111958201&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                         <FacebookIcon className={styles.icon} />
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/h.y.lu_0201/" target="_blank" rel="noopener noreferrer">
                         <InstagramIcon className={styles.icon} />
                     </a>
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@huey_lu_0201" target="_blank" rel="noopener noreferrer">
                         <YouTubeIcon className={styles.icon} />
                     </a>
                 </div>
