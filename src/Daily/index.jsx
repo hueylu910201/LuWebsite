@@ -1,33 +1,44 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Card, Col, Row, Button } from 'antd';
 import { motion, useInView } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
 import styles from "../Daily/daily.module.css"
 
 export default function Daily() {
-    const dailyItems = [
-        {
-            id: '1',
-            title: '系隊籃球',
-            img: '/basketball.jpg',
-            description: '從小就喜歡打籃球的我，在大一就果斷加入了系籃。在大學期間餐與了很多比賽，也拿到了系際盃二連霸。在系隊中也讓我成長許多，不管是球技、心態方面又或是成為領導者等，都讓我收獲滿滿。'
-        },
-        {
-            id: '2',
-            title: '記錄生活',
-            img: '/editvideo.jpg',
-            description: '剪片也是我的興趣之一，由於國中開始喜歡看遊戲實況主精華片段便接觸剪片，之後也因此建立了頻道記錄自己遊戲與生活日常，雖然沒有定期更新，但剪片對我來說是仍然是一件很有成就感且很快樂的事。'
-        },
 
-    ]
-    const ref = useRef(null);
-    const isInView = useInView(ref, { threshold: 0.3 }); // 30% 可見時觸發動畫
-    const [hasPlayed, setHasPlayed] = useState(false); // 記錄動畫是否已經觸發過
-
-    // 當進入視窗且動畫尚未播放過時，播放動畫
-    if (isInView && !hasPlayed) {
+    const ref = useRef(null); // 監控的元素
+    const isInView = useInView(ref, { threshold: 0.5 }); // 元素至少有 50% 可見時觸發
+    const [hasPlayed, setHasPlayed] = useState(false); // 是否已觸發動畫
+  
+    useEffect(() => {
+      if (isInView && !hasPlayed) {
         setHasPlayed(true);
-    }
-
+      }
+    }, [isInView, hasPlayed]);
+  
+    // 打字動畫組件
+    const TypingText = ({ text, speed }) => {
+      const [displayedText, setDisplayedText] = useState("");
+      const index = useRef(0);
+  
+      useEffect(() => {
+        setDisplayedText("");
+        index.current = 0;
+  
+        const interval = setInterval(() => {
+          if (index.current < text.length) {
+            setDisplayedText(text.slice(0, index.current + 1));
+            index.current++;
+          } else {
+            clearInterval(interval);
+          }
+        }, speed);
+  
+        return () => clearInterval(interval);
+      }, [text, speed]);
+  
+      return <p className="min-h-[24px]">{displayedText}</p>;
+    };
     return (
         <div className={styles.aboutContainer}>
             {/* 視差背景 */}
@@ -55,31 +66,34 @@ export default function Daily() {
                         <Col xs={24} md={12} className={styles.textColumn} >
                             <div className={styles.introText}>
                                 <p className={styles.title}>關於我</p>
-                                <p>熱愛運動的我，在大學中我同時參加了系籃與系排，很熟悉團隊合作與溝通，同時我也很喜歡剪輯自己的遊戲精華或記錄生活VLOG。我對於開發網頁、APP也有極高的興趣，目前仍持續學習新技術中!</p>
+                                <TypingText
+                                    text="熱愛運動的我，在大學中我同時參加了系籃與系排，很熟悉團隊合作與溝通，同時我也很喜歡剪輯自己的遊戲精華或記錄生活VLOG。我對於開發網頁、APP也有極高的興趣，目前仍持續學習新技術中!"
+                                    speed={20} // 每個字母的顯示速度
+                                />
                                 <Button className={styles.learnButton} href='https://www.youtube.com/@huey_lu_0201'>我的頻道</Button>
                             </div>
                         </Col>
 
                         <Row gutter={[20]} className={styles.rowContainer}>
-                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                            <Col xs={8} md={10} className={styles.contentColumn}>
                                 <div className={styles.habbitBox}>
                                     <img src="/basketball.png" alt="前端設計" />
                                     <h3>打球</h3>
                                 </div>
                             </Col>
-                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                            <Col xs={8} md={10} className={styles.contentColumn}>
                                 <div className={styles.habbitBox}>
                                     <img src="/code.png" alt="前端設計" />
                                     <h3>程式</h3>
                                 </div>
                             </Col>
-                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                            <Col xs={8} md={10} className={styles.contentColumn}>
                                 <div className={styles.habbitBox}>
                                     <img src="/gamepad.png" alt="前端設計" />
                                     <h3>遊戲</h3>
                                 </div>
                             </Col>
-                            <Col xs={8} md={10}  className={styles.contentColumn}>
+                            <Col xs={8} md={10} className={styles.contentColumn}>
                                 <div className={styles.habbitBox}>
                                     <img src="/video (2).png" alt="前端設計" />
                                     <h3>剪輯</h3>

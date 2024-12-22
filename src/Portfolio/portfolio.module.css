@@ -27,6 +27,7 @@
     /* justify-content: center; */
     /* padding: 4rem 6rem; */
     /* padding-top: 1rem; */
+    margin: 2rem;
 }
 .imageColumn{
     display: flex;
@@ -137,6 +138,24 @@
 @media(max-width:420px) {
     .portfolioContainer{
         width: 84%;
+    }
+    .imageColumn{
+        display: none;
+    }
+    .timelineTitle{
+        font-size: 1rem;
+    }
+    .timelineDescription{
+        bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+@media(max-width:400px) {
+    .portfolioContainer{
+        width: 80%;
     }
     .imageColumn{
         display: none;

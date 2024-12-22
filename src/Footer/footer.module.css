@@ -32,3 +32,8 @@
         width: 84%;
     }
 }
+@media screen and (max-width: 400px) {
+    .footer {
+        width: 80%;
+    }
+}

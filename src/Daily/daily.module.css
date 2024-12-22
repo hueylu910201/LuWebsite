@@ -142,10 +142,11 @@
     }
     .title{
         text-align: center;
+        margin-bottom: 2rem;
     }
     .introText {
         padding: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 1.8;
         text-align: center;
     }
@@ -176,7 +177,7 @@
     .aboutContainer {
         width: 87%;
         overflow-x: hidden;
-        padding: 2rem 1rem;
+        padding: 0rem 1rem;
         /* padding-bottom: 5rem; */
     }
 
@@ -212,6 +213,14 @@
 @media (max-width: 420px){
     .aboutContainer {
         width: 84%;
+        overflow-x: hidden;
+        padding: 2rem 1rem;
+        /* padding-bottom: 5rem; */
+    }
+}
+@media (max-width: 400px){
+    .aboutContainer {
+        width: 79%;
         overflow-x: hidden;
         padding: 2rem 1rem;
         /* padding-bottom: 5rem; */
