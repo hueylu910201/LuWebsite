@@ -103,7 +103,7 @@
 }
 
 .modalContent {
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .modalImage {
@@ -132,6 +132,7 @@
 .modaledscription {
     font-size: 1.2rem;
     margin: 1.5rem 0;
+    padding-top: 1rem;
 }
 
 .modalButton {
@@ -199,10 +200,12 @@
         font-size: 1.5rem;
         /* 調整標題字體大小 */
     }
+
     .modalImage {
         aspect-ratio: 16/9;
         width: 360px;
     }
+
     .modaledscription {
         font-size: 1.1rem;
         /* 調整描述字體大小 */
@@ -217,7 +220,7 @@
 
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
     .portfolioContainer {
         display: flex;
         width: 84%;
@@ -225,12 +228,14 @@
         padding: 0 2rem;
         flex-direction: column;
     }
+
     .modalImage {
         aspect-ratio: 16/9;
         width: 300px;
     }
 }
-@media screen and (max-width: 415px){
+
+@media screen and (max-width: 415px) {
     .portfolioContainer {
         display: flex;
         width: 83%;
@@ -238,13 +243,14 @@
         padding: 0 2rem;
         flex-direction: column;
     }
+
     .modalImage {
         aspect-ratio: 16/9;
         width: 300px;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
     .portfolioContainer {
         display: flex;
         width: 80%;
@@ -252,6 +258,7 @@
         padding: 0 2rem;
         flex-direction: column;
     }
+
     .modalImage {
         aspect-ratio: 16/9;
         width: 300px;

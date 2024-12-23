@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Row, Col, Segmented, Modal, Button } from 'antd';
 import styles from "../Portfolio2/portfolio2.module.css";
+import { set } from 'rsuite/esm/internals/utils/date';
 const { Meta } = Card;
 export default function Portfolio2() {
 
@@ -100,10 +101,11 @@ export default function Portfolio2() {
     const [selectedOption, setSelectedOption] = useState('前端作品');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
-
+    const[portfolioTitle,setPortfolioTitle]=useState(portfolioItems);
     const handleCardClick = (item) => {
         setSelectedItem(item);
         setIsModalOpen(true);
+        setPortfolioTitle(item.title);
     };
 
     const handleModalClose = () => {
@@ -193,7 +195,7 @@ export default function Portfolio2() {
                 </Row>
             )}
             <Modal
-                title={<div className={styles.modalBigTitle}>作品詳細介紹</div>}
+                title={<div className={styles.modalBigTitle}>{portfolioTitle}</div>}
                 open={isModalOpen}
                 onCancel={handleModalClose}
                 footer={null}
@@ -208,7 +210,7 @@ export default function Portfolio2() {
                             className={styles.modalImage}
                         />
                         <div className={styles.modalDescription}>
-                            <p className={styles.modaltitle}>{selectedItem.title}</p>
+                            {/* <p className={styles.modaltitle}>{selectedItem.title}</p> */}
                             <p className={styles.modaledscription}>{selectedItem.description}</p>
                             {/* 可以在這裡添加更多項目詳細信息 */}
                             <Button
