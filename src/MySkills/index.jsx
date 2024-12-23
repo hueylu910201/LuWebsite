@@ -12,7 +12,7 @@ export default function MySkills() {
                 <div className={styles.introText}>
                     <img src="/web-programming.png" alt="前端設計" />
                     <h3>前端設計</h3>
-                    <p>熟悉基本網頁架構，能使用HTML、React完成RWD，也能使用Redux完成動態網頁</p>
+                    <p>熟悉網頁架構，能使用HTML、React完成RWD，也能使用Redux完成動態網頁</p>
                 </div>
             </Col>
             <Col xs={18} md={6} xxl={5} className={styles.contentColumn2}>
